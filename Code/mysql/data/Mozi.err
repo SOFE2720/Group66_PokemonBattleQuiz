@@ -1,0 +1,336 @@
+2020-09-06 01:18:31 27316 [Note] Plugin 'FEDERATED' is disabled.
+05:18:31 UTC - mysqld got exception 0xc0000005 ;
+This could be because you hit a bug. It is also possible that this binary
+or one of the libraries it was linked against is corrupt, improperly built,
+or misconfigured. This error can also be caused by malfunctioning hardware.
+We will try our best to scrape up some info that will hopefully help
+diagnose the problem, but since we have already crashed, 
+something is definitely wrong and this may fail.
+
+key_buffer_size=8388608
+read_buffer_size=131072
+max_used_connections=0
+max_threads=151
+thread_count=0
+connection_count=0
+It is possible that mysqld could use up to 
+key_buffer_size + (read_buffer_size + sort_buffer_size)*max_threads = 67589 K  bytes of memory
+Hope that's ok; if not, decrease some variables in the equation.
+
+Thread pointer: 0x10fd0b8
+Attempting backtrace. You can use the following information to find out
+where mysqld died. If you see no messages after this, something went
+terribly wrong...
+2cbbf8    mysqld_usbwv8.exe!?free_table_share@@YAXPAUTABLE_SHARE@@@Z()
+2cdce5    mysqld_usbwv8.exe!?open_table_def@@YAHPAVTHD@@PAUTABLE_SHARE@@I@Z()
+21fa22    mysqld_usbwv8.exe!?get_table_share@@YAPAUTABLE_SHARE@@PAVTHD@@PAUTABLE_LIST@@PBDIIPAHI@Z()
+21fa8e    mysqld_usbwv8.exe!?get_table_share@@YAPAUTABLE_SHARE@@PAVTHD@@PAUTABLE_LIST@@PBDIIPAHI@Z()
+225c99    mysqld_usbwv8.exe!?open_table@@YA_NPAVTHD@@PAUTABLE_LIST@@PAVOpen_table_context@@@Z()
+226677    mysqld_usbwv8.exe!?recover_from_failed_open@Open_table_context@@QAE_NPAVTHD@@@Z()
+227736    mysqld_usbwv8.exe!?open_tables@@YA_NPAVTHD@@PAPAUTABLE_LIST@@PAIIPAVPrelocking_strategy@@@Z()
+227964    mysqld_usbwv8.exe!?open_and_lock_tables@@YA_NPAVTHD@@PAUTABLE_LIST@@_NIPAVPrelocking_strategy@@@Z()
+216417    mysqld_usbwv8.exe!?global_value_ptr@sys_var_pluginvar@@UAEPAEPAVTHD@@PAUst_mysql_lex_string@@@Z()
+2173ac    mysqld_usbwv8.exe!?plugin_init@@YAHPAHPAPADH@Z()
+1d102d    mysqld_usbwv8.exe!?init_common_variables@@YAHXZ()
+1d1d23    mysqld_usbwv8.exe!?win_main@@YAHHPAPAD@Z()
+1d2287    mysqld_usbwv8.exe!?mysql_service@@YAHPAX@Z()
+6588fa    mysqld_usbwv8.exe!my_mb_ctype_mb()
+770f6359    KERNEL32.DLL!BaseThreadInitThunk()
+77e87c24    ntdll.dll!RtlGetAppContainerNamedObjectPath()
+77e87bf4    ntdll.dll!RtlGetAppContainerNamedObjectPath()
+
+Trying to get some variables.
+Some pointers may be invalid and cause the dump to abort.
+Query (0): Connection ID (thread ID): 0
+Status: NOT_KILLED
+
+The manual page at http://dev.mysql.com/doc/mysql/en/crashing.html contains
+information that should help you find out what is causing the crash.
+2020-09-06 01:18:55 38980 [Note] Plugin 'FEDERATED' is disabled.
+05:18:55 UTC - mysqld got exception 0xc0000005 ;
+This could be because you hit a bug. It is also possible that this binary
+or one of the libraries it was linked against is corrupt, improperly built,
+or misconfigured. This error can also be caused by malfunctioning hardware.
+We will try our best to scrape up some info that will hopefully help
+diagnose the problem, but since we have already crashed, 
+something is definitely wrong and this may fail.
+
+key_buffer_size=8388608
+read_buffer_size=131072
+max_used_connections=0
+max_threads=151
+thread_count=0
+connection_count=0
+It is possible that mysqld could use up to 
+key_buffer_size + (read_buffer_size + sort_buffer_size)*max_threads = 67589 K  bytes of memory
+Hope that's ok; if not, decrease some variables in the equation.
+
+Thread pointer: 0x10fcf04
+Attempting backtrace. You can use the following information to find out
+where mysqld died. If you see no messages after this, something went
+terribly wrong...
+2cbbf8    mysqld_usbwv8.exe!?free_table_share@@YAXPAUTABLE_SHARE@@@Z()
+2cdce5    mysqld_usbwv8.exe!?open_table_def@@YAHPAVTHD@@PAUTABLE_SHARE@@I@Z()
+21fa22    mysqld_usbwv8.exe!?get_table_share@@YAPAUTABLE_SHARE@@PAVTHD@@PAUTABLE_LIST@@PBDIIPAHI@Z()
+21fa8e    mysqld_usbwv8.exe!?get_table_share@@YAPAUTABLE_SHARE@@PAVTHD@@PAUTABLE_LIST@@PBDIIPAHI@Z()
+225c99    mysqld_usbwv8.exe!?open_table@@YA_NPAVTHD@@PAUTABLE_LIST@@PAVOpen_table_context@@@Z()
+226677    mysqld_usbwv8.exe!?recover_from_failed_open@Open_table_context@@QAE_NPAVTHD@@@Z()
+227736    mysqld_usbwv8.exe!?open_tables@@YA_NPAVTHD@@PAPAUTABLE_LIST@@PAIIPAVPrelocking_strategy@@@Z()
+227964    mysqld_usbwv8.exe!?open_and_lock_tables@@YA_NPAVTHD@@PAUTABLE_LIST@@_NIPAVPrelocking_strategy@@@Z()
+216417    mysqld_usbwv8.exe!?global_value_ptr@sys_var_pluginvar@@UAEPAEPAVTHD@@PAUst_mysql_lex_string@@@Z()
+2173ac    mysqld_usbwv8.exe!?plugin_init@@YAHPAHPAPADH@Z()
+1d102d    mysqld_usbwv8.exe!?init_common_variables@@YAHXZ()
+1d1d23    mysqld_usbwv8.exe!?win_main@@YAHHPAPAD@Z()
+1d2287    mysqld_usbwv8.exe!?mysql_service@@YAHPAX@Z()
+6588fa    mysqld_usbwv8.exe!my_mb_ctype_mb()
+770f6359    KERNEL32.DLL!BaseThreadInitThunk()
+77e87c24    ntdll.dll!RtlGetAppContainerNamedObjectPath()
+77e87bf4    ntdll.dll!RtlGetAppContainerNamedObjectPath()
+
+Trying to get some variables.
+Some pointers may be invalid and cause the dump to abort.
+Query (0): Connection ID (thread ID): 0
+Status: NOT_KILLED
+
+The manual page at http://dev.mysql.com/doc/mysql/en/crashing.html contains
+information that should help you find out what is causing the crash.
+2020-09-06 01:19:14 37308 [Note] Plugin 'FEDERATED' is disabled.
+05:19:14 UTC - mysqld got exception 0xc0000005 ;
+This could be because you hit a bug. It is also possible that this binary
+or one of the libraries it was linked against is corrupt, improperly built,
+or misconfigured. This error can also be caused by malfunctioning hardware.
+We will try our best to scrape up some info that will hopefully help
+diagnose the problem, but since we have already crashed, 
+something is definitely wrong and this may fail.
+
+key_buffer_size=8388608
+read_buffer_size=131072
+max_used_connections=0
+max_threads=151
+thread_count=0
+connection_count=0
+It is possible that mysqld could use up to 
+key_buffer_size + (read_buffer_size + sort_buffer_size)*max_threads = 67589 K  bytes of memory
+Hope that's ok; if not, decrease some variables in the equation.
+
+Thread pointer: 0x10fd318
+Attempting backtrace. You can use the following information to find out
+where mysqld died. If you see no messages after this, something went
+terribly wrong...
+2cbbf8    mysqld_usbwv8.exe!?free_table_share@@YAXPAUTABLE_SHARE@@@Z()
+2cdce5    mysqld_usbwv8.exe!?open_table_def@@YAHPAVTHD@@PAUTABLE_SHARE@@I@Z()
+21fa22    mysqld_usbwv8.exe!?get_table_share@@YAPAUTABLE_SHARE@@PAVTHD@@PAUTABLE_LIST@@PBDIIPAHI@Z()
+21fa8e    mysqld_usbwv8.exe!?get_table_share@@YAPAUTABLE_SHARE@@PAVTHD@@PAUTABLE_LIST@@PBDIIPAHI@Z()
+225c99    mysqld_usbwv8.exe!?open_table@@YA_NPAVTHD@@PAUTABLE_LIST@@PAVOpen_table_context@@@Z()
+226677    mysqld_usbwv8.exe!?recover_from_failed_open@Open_table_context@@QAE_NPAVTHD@@@Z()
+227736    mysqld_usbwv8.exe!?open_tables@@YA_NPAVTHD@@PAPAUTABLE_LIST@@PAIIPAVPrelocking_strategy@@@Z()
+227964    mysqld_usbwv8.exe!?open_and_lock_tables@@YA_NPAVTHD@@PAUTABLE_LIST@@_NIPAVPrelocking_strategy@@@Z()
+216417    mysqld_usbwv8.exe!?global_value_ptr@sys_var_pluginvar@@UAEPAEPAVTHD@@PAUst_mysql_lex_string@@@Z()
+2173ac    mysqld_usbwv8.exe!?plugin_init@@YAHPAHPAPADH@Z()
+1d102d    mysqld_usbwv8.exe!?init_common_variables@@YAHXZ()
+1d1d23    mysqld_usbwv8.exe!?win_main@@YAHHPAPAD@Z()
+1d2287    mysqld_usbwv8.exe!?mysql_service@@YAHPAX@Z()
+6588fa    mysqld_usbwv8.exe!my_mb_ctype_mb()
+770f6359    KERNEL32.DLL!BaseThreadInitThunk()
+77e87c24    ntdll.dll!RtlGetAppContainerNamedObjectPath()
+77e87bf4    ntdll.dll!RtlGetAppContainerNamedObjectPath()
+
+Trying to get some variables.
+Some pointers may be invalid and cause the dump to abort.
+Query (0): Connection ID (thread ID): 0
+Status: NOT_KILLED
+
+The manual page at http://dev.mysql.com/doc/mysql/en/crashing.html contains
+information that should help you find out what is causing the crash.
+2020-09-06 01:22:25 33264 [Note] Plugin 'FEDERATED' is disabled.
+05:22:25 UTC - mysqld got exception 0xc0000005 ;
+This could be because you hit a bug. It is also possible that this binary
+or one of the libraries it was linked against is corrupt, improperly built,
+or misconfigured. This error can also be caused by malfunctioning hardware.
+We will try our best to scrape up some info that will hopefully help
+diagnose the problem, but since we have already crashed, 
+something is definitely wrong and this may fail.
+
+key_buffer_size=8388608
+read_buffer_size=131072
+max_used_connections=0
+max_threads=151
+thread_count=0
+connection_count=0
+It is possible that mysqld could use up to 
+key_buffer_size + (read_buffer_size + sort_buffer_size)*max_threads = 67589 K  bytes of memory
+Hope that's ok; if not, decrease some variables in the equation.
+
+Thread pointer: 0x10fd010
+Attempting backtrace. You can use the following information to find out
+where mysqld died. If you see no messages after this, something went
+terribly wrong...
+2cbbf8    mysqld_usbwv8.exe!?free_table_share@@YAXPAUTABLE_SHARE@@@Z()
+2cdce5    mysqld_usbwv8.exe!?open_table_def@@YAHPAVTHD@@PAUTABLE_SHARE@@I@Z()
+21fa22    mysqld_usbwv8.exe!?get_table_share@@YAPAUTABLE_SHARE@@PAVTHD@@PAUTABLE_LIST@@PBDIIPAHI@Z()
+21fa8e    mysqld_usbwv8.exe!?get_table_share@@YAPAUTABLE_SHARE@@PAVTHD@@PAUTABLE_LIST@@PBDIIPAHI@Z()
+225c99    mysqld_usbwv8.exe!?open_table@@YA_NPAVTHD@@PAUTABLE_LIST@@PAVOpen_table_context@@@Z()
+226677    mysqld_usbwv8.exe!?recover_from_failed_open@Open_table_context@@QAE_NPAVTHD@@@Z()
+227736    mysqld_usbwv8.exe!?open_tables@@YA_NPAVTHD@@PAPAUTABLE_LIST@@PAIIPAVPrelocking_strategy@@@Z()
+227964    mysqld_usbwv8.exe!?open_and_lock_tables@@YA_NPAVTHD@@PAUTABLE_LIST@@_NIPAVPrelocking_strategy@@@Z()
+216417    mysqld_usbwv8.exe!?global_value_ptr@sys_var_pluginvar@@UAEPAEPAVTHD@@PAUst_mysql_lex_string@@@Z()
+2173ac    mysqld_usbwv8.exe!?plugin_init@@YAHPAHPAPADH@Z()
+1d102d    mysqld_usbwv8.exe!?init_common_variables@@YAHXZ()
+1d1d23    mysqld_usbwv8.exe!?win_main@@YAHHPAPAD@Z()
+1d2287    mysqld_usbwv8.exe!?mysql_service@@YAHPAX@Z()
+6588fa    mysqld_usbwv8.exe!my_mb_ctype_mb()
+770f6359    KERNEL32.DLL!BaseThreadInitThunk()
+77e87c24    ntdll.dll!RtlGetAppContainerNamedObjectPath()
+77e87bf4    ntdll.dll!RtlGetAppContainerNamedObjectPath()
+
+Trying to get some variables.
+Some pointers may be invalid and cause the dump to abort.
+Query (0): Connection ID (thread ID): 0
+Status: NOT_KILLED
+
+The manual page at http://dev.mysql.com/doc/mysql/en/crashing.html contains
+information that should help you find out what is causing the crash.
+2020-09-06 01:22:53 32520 [Note] Plugin 'FEDERATED' is disabled.
+05:22:53 UTC - mysqld got exception 0xc0000005 ;
+This could be because you hit a bug. It is also possible that this binary
+or one of the libraries it was linked against is corrupt, improperly built,
+or misconfigured. This error can also be caused by malfunctioning hardware.
+We will try our best to scrape up some info that will hopefully help
+diagnose the problem, but since we have already crashed, 
+something is definitely wrong and this may fail.
+
+key_buffer_size=8388608
+read_buffer_size=131072
+max_used_connections=0
+max_threads=151
+thread_count=0
+connection_count=0
+It is possible that mysqld could use up to 
+key_buffer_size + (read_buffer_size + sort_buffer_size)*max_threads = 67589 K  bytes of memory
+Hope that's ok; if not, decrease some variables in the equation.
+
+Thread pointer: 0x10fcd80
+Attempting backtrace. You can use the following information to find out
+where mysqld died. If you see no messages after this, something went
+terribly wrong...
+2cbbf8    mysqld_usbwv8.exe!?free_table_share@@YAXPAUTABLE_SHARE@@@Z()
+2cdce5    mysqld_usbwv8.exe!?open_table_def@@YAHPAVTHD@@PAUTABLE_SHARE@@I@Z()
+21fa22    mysqld_usbwv8.exe!?get_table_share@@YAPAUTABLE_SHARE@@PAVTHD@@PAUTABLE_LIST@@PBDIIPAHI@Z()
+21fa8e    mysqld_usbwv8.exe!?get_table_share@@YAPAUTABLE_SHARE@@PAVTHD@@PAUTABLE_LIST@@PBDIIPAHI@Z()
+225c99    mysqld_usbwv8.exe!?open_table@@YA_NPAVTHD@@PAUTABLE_LIST@@PAVOpen_table_context@@@Z()
+226677    mysqld_usbwv8.exe!?recover_from_failed_open@Open_table_context@@QAE_NPAVTHD@@@Z()
+227736    mysqld_usbwv8.exe!?open_tables@@YA_NPAVTHD@@PAPAUTABLE_LIST@@PAIIPAVPrelocking_strategy@@@Z()
+227964    mysqld_usbwv8.exe!?open_and_lock_tables@@YA_NPAVTHD@@PAUTABLE_LIST@@_NIPAVPrelocking_strategy@@@Z()
+216417    mysqld_usbwv8.exe!?global_value_ptr@sys_var_pluginvar@@UAEPAEPAVTHD@@PAUst_mysql_lex_string@@@Z()
+2173ac    mysqld_usbwv8.exe!?plugin_init@@YAHPAHPAPADH@Z()
+1d102d    mysqld_usbwv8.exe!?init_common_variables@@YAHXZ()
+1d1d23    mysqld_usbwv8.exe!?win_main@@YAHHPAPAD@Z()
+1d2287    mysqld_usbwv8.exe!?mysql_service@@YAHPAX@Z()
+6588fa    mysqld_usbwv8.exe!my_mb_ctype_mb()
+770f6359    KERNEL32.DLL!BaseThreadInitThunk()
+77e87c24    ntdll.dll!RtlGetAppContainerNamedObjectPath()
+77e87bf4    ntdll.dll!RtlGetAppContainerNamedObjectPath()
+
+Trying to get some variables.
+Some pointers may be invalid and cause the dump to abort.
+Query (0): Connection ID (thread ID): 0
+Status: NOT_KILLED
+
+The manual page at http://dev.mysql.com/doc/mysql/en/crashing.html contains
+information that should help you find out what is causing the crash.
+2020-09-06 01:23:34 37884 [Note] Plugin 'FEDERATED' is disabled.
+05:23:34 UTC - mysqld got exception 0xc0000005 ;
+This could be because you hit a bug. It is also possible that this binary
+or one of the libraries it was linked against is corrupt, improperly built,
+or misconfigured. This error can also be caused by malfunctioning hardware.
+We will try our best to scrape up some info that will hopefully help
+diagnose the problem, but since we have already crashed, 
+something is definitely wrong and this may fail.
+
+key_buffer_size=8388608
+read_buffer_size=131072
+max_used_connections=0
+max_threads=151
+thread_count=0
+connection_count=0
+It is possible that mysqld could use up to 
+key_buffer_size + (read_buffer_size + sort_buffer_size)*max_threads = 67589 K  bytes of memory
+Hope that's ok; if not, decrease some variables in the equation.
+
+Thread pointer: 0x10fcfa8
+Attempting backtrace. You can use the following information to find out
+where mysqld died. If you see no messages after this, something went
+terribly wrong...
+2cbbf8    mysqld_usbwv8.exe!?free_table_share@@YAXPAUTABLE_SHARE@@@Z()
+2cdce5    mysqld_usbwv8.exe!?open_table_def@@YAHPAVTHD@@PAUTABLE_SHARE@@I@Z()
+21fa22    mysqld_usbwv8.exe!?get_table_share@@YAPAUTABLE_SHARE@@PAVTHD@@PAUTABLE_LIST@@PBDIIPAHI@Z()
+21fa8e    mysqld_usbwv8.exe!?get_table_share@@YAPAUTABLE_SHARE@@PAVTHD@@PAUTABLE_LIST@@PBDIIPAHI@Z()
+225c99    mysqld_usbwv8.exe!?open_table@@YA_NPAVTHD@@PAUTABLE_LIST@@PAVOpen_table_context@@@Z()
+226677    mysqld_usbwv8.exe!?recover_from_failed_open@Open_table_context@@QAE_NPAVTHD@@@Z()
+227736    mysqld_usbwv8.exe!?open_tables@@YA_NPAVTHD@@PAPAUTABLE_LIST@@PAIIPAVPrelocking_strategy@@@Z()
+227964    mysqld_usbwv8.exe!?open_and_lock_tables@@YA_NPAVTHD@@PAUTABLE_LIST@@_NIPAVPrelocking_strategy@@@Z()
+216417    mysqld_usbwv8.exe!?global_value_ptr@sys_var_pluginvar@@UAEPAEPAVTHD@@PAUst_mysql_lex_string@@@Z()
+2173ac    mysqld_usbwv8.exe!?plugin_init@@YAHPAHPAPADH@Z()
+1d102d    mysqld_usbwv8.exe!?init_common_variables@@YAHXZ()
+1d1d23    mysqld_usbwv8.exe!?win_main@@YAHHPAPAD@Z()
+1d2287    mysqld_usbwv8.exe!?mysql_service@@YAHPAX@Z()
+6588fa    mysqld_usbwv8.exe!my_mb_ctype_mb()
+770f6359    KERNEL32.DLL!BaseThreadInitThunk()
+77e87c24    ntdll.dll!RtlGetAppContainerNamedObjectPath()
+77e87bf4    ntdll.dll!RtlGetAppContainerNamedObjectPath()
+
+Trying to get some variables.
+Some pointers may be invalid and cause the dump to abort.
+Query (0): Connection ID (thread ID): 0
+Status: NOT_KILLED
+
+The manual page at http://dev.mysql.com/doc/mysql/en/crashing.html contains
+information that should help you find out what is causing the crash.
+2020-09-06 01:23:47 27320 [Note] Plugin 'FEDERATED' is disabled.
+05:23:47 UTC - mysqld got exception 0xc0000005 ;
+This could be because you hit a bug. It is also possible that this binary
+or one of the libraries it was linked against is corrupt, improperly built,
+or misconfigured. This error can also be caused by malfunctioning hardware.
+We will try our best to scrape up some info that will hopefully help
+diagnose the problem, but since we have already crashed, 
+something is definitely wrong and this may fail.
+
+key_buffer_size=8388608
+read_buffer_size=131072
+max_used_connections=0
+max_threads=151
+thread_count=0
+connection_count=0
+It is possible that mysqld could use up to 
+key_buffer_size + (read_buffer_size + sort_buffer_size)*max_threads = 67589 K  bytes of memory
+Hope that's ok; if not, decrease some variables in the equation.
+
+Thread pointer: 0x10fce70
+Attempting backtrace. You can use the following information to find out
+where mysqld died. If you see no messages after this, something went
+terribly wrong...
+2cbbf8    mysqld_usbwv8.exe!?free_table_share@@YAXPAUTABLE_SHARE@@@Z()
+2cdce5    mysqld_usbwv8.exe!?open_table_def@@YAHPAVTHD@@PAUTABLE_SHARE@@I@Z()
+21fa22    mysqld_usbwv8.exe!?get_table_share@@YAPAUTABLE_SHARE@@PAVTHD@@PAUTABLE_LIST@@PBDIIPAHI@Z()
+21fa8e    mysqld_usbwv8.exe!?get_table_share@@YAPAUTABLE_SHARE@@PAVTHD@@PAUTABLE_LIST@@PBDIIPAHI@Z()
+225c99    mysqld_usbwv8.exe!?open_table@@YA_NPAVTHD@@PAUTABLE_LIST@@PAVOpen_table_context@@@Z()
+226677    mysqld_usbwv8.exe!?recover_from_failed_open@Open_table_context@@QAE_NPAVTHD@@@Z()
+227736    mysqld_usbwv8.exe!?open_tables@@YA_NPAVTHD@@PAPAUTABLE_LIST@@PAIIPAVPrelocking_strategy@@@Z()
+227964    mysqld_usbwv8.exe!?open_and_lock_tables@@YA_NPAVTHD@@PAUTABLE_LIST@@_NIPAVPrelocking_strategy@@@Z()
+216417    mysqld_usbwv8.exe!?global_value_ptr@sys_var_pluginvar@@UAEPAEPAVTHD@@PAUst_mysql_lex_string@@@Z()
+2173ac    mysqld_usbwv8.exe!?plugin_init@@YAHPAHPAPADH@Z()
+1d102d    mysqld_usbwv8.exe!?init_common_variables@@YAHXZ()
+1d1d23    mysqld_usbwv8.exe!?win_main@@YAHHPAPAD@Z()
+1d2287    mysqld_usbwv8.exe!?mysql_service@@YAHPAX@Z()
+6588fa    mysqld_usbwv8.exe!my_mb_ctype_mb()
+770f6359    KERNEL32.DLL!BaseThreadInitThunk()
+77e87c24    ntdll.dll!RtlGetAppContainerNamedObjectPath()
+77e87bf4    ntdll.dll!RtlGetAppContainerNamedObjectPath()
+
+Trying to get some variables.
+Some pointers may be invalid and cause the dump to abort.
+Query (0): Connection ID (thread ID): 0
+Status: NOT_KILLED
+
+The manual page at http://dev.mysql.com/doc/mysql/en/crashing.html contains
+information that should help you find out what is causing the crash.

@@ -1,0 +1,99 @@
+/*--Abdul-Moiz, Yash Patel, Kalapan Kannathasan
+  Stylesheet
+--*/
+html{
+	scroll-behavior: smooth;
+}
+body{
+	font-family: Lobster Two, Arial;
+	text-align: center;
+	color: white;
+  background-color: black;
+}
+h1{
+	color: red;
+	border-style: solid;
+	margin-left: 35%;
+	margin-right: 35%;
+	text-align: center;
+}
+a{
+	color: white;
+}
+p{
+	text-align: center;
+	font-size: 1.25rem;
+}
+
+/* Navbar */
+.style__navbar {
+  background: transparent;
+  transition-duration: 300ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+  position: fixed;
+  top:0;
+  background-color: black;
+  margin-bottom: 0%;
+  width:100%;
+  z-index: 1;
+}
+
+.footer {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 8%;
+   background-color: #323232;
+   color: white;
+   text-align: center;
+   padding-top: 1%;
+   padding-bottom: 1%;
+}
+
+.first{
+  background-image: url(../assets/home.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+.nav{
+  font-size: 2rem;
+  color: red;
+}
+.name{
+  font-size: 3.75rem; 
+  color: white; 
+  background-color: #FD4412; 
+  font-family: 'Felipa', cursive;
+}
+.courseTable tr, td {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    border: 2px solid white;
+    position: center;
+    background-color: white;
+    color:black;
+    
+}
+.courseTable { 
+  width: 50%;
+  margin: 0 auto;
+}
+.startLog input[type = "submit"]{
+  background: none;
+  border-color: #FD4412;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  outline: none;
+  font-family: Lobster Two, Arial;
+}
+.startLog input[type = "submit"]:hover{
+  background: #FD4412;
+}
